@@ -5,5 +5,15 @@
 ![Alt text](doc/fig_structure.png "pipeline")
 
 
+## Environments
+- Python 3.8
+- PyTorch 1.7.0
+- mmcv 1.2.7
 
-**The code will be made publicly available upon acceptance of the paper.**
+The conda environment can be installed by referring to install.txt
+
+## Usage
+#### Two-Team Setting stage 0
+    CUDA_VISIBLE_DEVICES=0 ./tools/dist_train.sh configs/gfl_incre_two_ranks/gfl_r50_fpn_1x_players_stage_0.py 1 --work-dir=outputs/two_ranks/gfl_r50_fpn_1x_players_stage_0  --seed=2023
+#### Two-Team Setting stage 1
+    CUDA_VISIBLE_DEVICES=0 ./tools/dist_train.sh configs/gfl_incre_two_ranks/gfl_r50_fpn_1x_players_stage_1.py 1 --work-dir=outputs/two_ranks/gfl_r50_fpn_1x_players_stage_1  --seed=2023
